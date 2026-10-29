@@ -51,7 +51,6 @@ de ejemplo la primera vez que se ejecuta. La documentación automática de la AP
 <http://127.0.0.1:8000/docs>.
 
 **Cuenta de administrador de ejemplo:** `admin@berryandbooks.com` / `admin123`
-(cámbiela antes de publicar el proyecto).
 
 ## Estructura del sistema
 
@@ -96,6 +95,6 @@ o `categorias_menu`.
 2. En Vercel, importe el repositorio (el framework FastAPI se detecta automáticamente).
 3. (Opcional) Defina la variable de entorno `SECRET_KEY` con un texto largo y aleatorio.
 
-> **Nota:** Vercel solo permite escribir en una carpeta temporal, por lo que en la versión publicada la
-> base de datos se reinicia con los datos de ejemplo cada cierto tiempo. En el equipo local los datos
+En la versión publicada la
+ base de datos se reinicia con los datos de ejemplo cada cierto tiempo. En el equipo local los datos
 > se guardan de forma permanente en `berry_books.db`.
