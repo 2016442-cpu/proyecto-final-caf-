@@ -1,0 +1,72 @@
+:root {
+  --crema: #f6ecdc;
+  --papel: #fffaf2;
+  --espresso: #3a2418;
+  --caramelo: #c98a3f;
+  --frambuesa: #9b2d4f;
+  --frambuesa-oscuro: #7c2340;
+  --borde: #e0cdb4;
+  --suave: #7a6354;
+}
+
+* { box-sizing: border-box; }
+
+body { font-family: system-ui, sans-serif; margin: 0; background: var(--crema); color: var(--espresso); line-height: 1.45; }
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+h2 { margin: 1rem 0 .5rem; font-size: 1.6rem; }
+h3 { margin-top: 1.5rem; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+header { background: var(--espresso); color: #fff3e0; padding: 2.4rem 0 2rem; border-bottom: 5px double var(--caramelo); margin-bottom: 1.8rem; }
+header h1 { margin: 0; font-size: 2.3rem; letter-spacing: .03em; }
+header p { margin: .4rem 0 0; color: #e9cfa5; font-style: italic; }
+
+nav { display: flex; flex-wrap: wrap; gap: .7rem; padding-top: .5rem; padding-bottom: 1.4rem; }
+main { padding-bottom: 3rem; min-height: 60vh; }
+
+button { cursor: pointer; border: 1px solid var(--borde); border-radius: 2rem; padding: .6rem 1.3rem; background: var(--papel); color: var(--espresso); font-weight: 600; font: inherit; font-weight: 600; transition: background .15s, transform .1s; }
+button:hover { background: #f1dfc4; }
+button:active { transform: scale(.97); }
+
+button.active, button.primary { background: var(--frambuesa); border-color: var(--frambuesa); color: #fff; }
+button.primary:hover { background: var(--frambuesa-oscuro); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.2rem; margin-top: 1.2rem; }
+.card { background: var(--papel); border: 1px solid var(--borde); border-top: 5px solid var(--caramelo); border-radius: .5rem; padding: 1rem 1.1rem; box-shadow: 0 2px 6px rgba(58, 36, 24, .08); transition: transform .15s; }
+.card:hover { transform: translateY(-3px); }
+.card h3 { margin: 0 0 .4rem; font-size: 1.1rem; }
+.card p { margin: .35rem 0; font-size: .93rem; color: var(--suave); }
+
+.price { font-family: Georgia, serif; font-size: 1.15rem; font-weight: 700; color: var(--frambuesa) !important; }
+
+.tag { display: inline-block; padding: .15rem .6rem; border-radius: 1rem; background: #f3e1c8; color: var(--espresso); font-size: .78rem; }
+.tag.ok { background: #dcebd3; color: #2f5a26; }
+.tag.off { background: #f7d9d4; color: #8b2a1f; }
+
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .9rem; padding: 1.1rem; background: var(--papel); border: 1px solid var(--borde); border-radius: .5rem; align-items: end; margin-top: 1rem; }
+.form.narrow { max-width: 380px; grid-template-columns: 1fr; }
+label { display: grid; gap: .3rem; font-size: .9rem; font-weight: 600; }
+input, select { padding: .55rem; border: 1px solid #c9b79d; border-radius: .35rem; font: inherit; background: #fff; color: var(--espresso); }
+
+input:focus, select:focus { outline: 2px solid var(--caramelo); border-color: var(--caramelo); }
+
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--papel); margin-top: 1rem; border: 1px solid var(--borde); }
+th, td { padding: .6rem; text-align: left; border-bottom: 1px solid #eddfca; font-size: .9rem; }
+th { background: var(--espresso); color: #fff3e0; text-transform: capitalize; font-weight: 600; }
+tr:hover td { background: #fbf1e1; }
+.actions { display: flex; gap: .4rem; }
+.actions button { padding: .3rem .8rem; font-size: .85rem; }
+.danger { background: #f9dcd6; color: #8b2a1f; border-color: #eab8af; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+.panel-head { display: flex; justify-content: space-between; align-items: center; }
+
+#message { min-height: 1.6rem; font-weight: 600; margin: .8rem 0 0; }
+#message.ok { color: #2f5a26; }
+#message.error { color: #b3261e; }
+.hint { color: var(--suave); font-size: .92rem; }
+
+footer { text-align: center; padding: 1.8rem 1rem; margin-top: 2rem; color: var(--suave); font-size: .85rem; border-top: 1px dashed var(--borde); }

@@ -1,0 +1,15 @@
+# Entorno virtual (se recrea con pip install -r requirements.txt)
+venv/
+.venv/
+
+# Archivos generados por Python
+__pycache__/
+*.pyc
+
+# Variables de entorno y archivos de Vercel
+.env
+.vercel/
+
+# Archivos del editor y del sistema
+.vscode/
+.DS_Store

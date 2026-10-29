@@ -1,0 +1,60 @@
+erDiagram
+  CLIENTES ||--o{ RESERVAS : realiza
+  ESPACIOS ||--o{ RESERVAS : recibe
+  CATEGORIAS_MENU ||--o{ PRODUCTOS_MENU : agrupa
+  GENEROS ||--o{ LIBROS : clasifica
+  CLIENTES {
+    int id_cliente PK
+    string nombre
+    string telefono
+    string email
+  }
+  ESPACIOS {
+    int id_espacio PK
+    string nombre
+    string tipo
+    int capacidad
+    string estado
+  }
+  RESERVAS {
+    int id_reserva PK
+    int id_cliente FK
+    int id_espacio FK
+    date fecha
+    time hora_inicio
+    time hora_fin
+    int num_personas
+    string estado
+  }
+  CATEGORIAS_MENU {
+    int id_categoria PK
+    string nombre
+  }
+  PRODUCTOS_MENU {
+    int id_producto PK
+    int id_categoria FK
+    string nombre
+    string descripcion
+    float precio
+    int stock
+    boolean disponible
+  }
+  GENEROS {
+    int id_genero PK
+    string nombre
+  }
+  LIBROS {
+    int id_libro PK
+    int id_genero FK
+    string titulo
+    string autor
+    int ejemplares
+    boolean disponible
+  }
+  USUARIOS {
+    int id_usuario PK
+    string nombre
+    string email UK
+    string password_hash
+    string rol
+  }
